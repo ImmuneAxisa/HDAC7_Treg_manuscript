@@ -1,0 +1,14 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+HDAC7-OE RNA-seq DGE spring19-final-paperV8.R
+HDAC7_Treg_manuscript.Rproj
+**/data/
+**/results/
+**/figures/
+**/tables/
+.DS_Store
+HDAC7_Treg_manuscript.tar.gz
+*gz
+*.zip

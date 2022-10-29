@@ -1,16 +1,16 @@
 # Introduction
 
-This repository contains the code associated with the manuscript "A Multiple Sclerosis Protective Coding Variant Reveals an Essential Role for HDAC7 in Regulatory T cells". This README file describes the organisation of the scripts related to the analyses presented in the manuscript. This repository has also been deposited on Zenodo.com, along with various intermediate results file that might be useful to users who wish to reuse the data and analyses in this project.
+This repository contains the code associated with the manuscript "A Multiple Sclerosis Protective Coding Variant Reveals an Essential Role for HDAC7 in Regulatory T cells". This README file describes the organisation of the scripts related to the analyses presented in the manuscript. This repository has also been deposited on figshare.com (10.6084/m9.figshare.21431485), along with various intermediate results file that might be useful to users who wish to reuse the data and analyses in this project. The github repository only contains the scripts, but the figshare.com repository. For ease of use, the full directory and file tree structure deposited on figshare.com is presented at the end of this document.
 
 # Disclaimer
-* Throughout this project, We use the `SLURM` job scheduling system run some of the "heavy" analyses on the Yale University Ruddle cluster.
-* The code and additional resources on Zenodo are provided as-is. We have validated that this runs without errors on the Ruddle cluster and on local MacOS systems, but do not guarantee that this will be the case in different computing environments.
+* Throughout this project, We use the `SLURM` job scheduling system to run some of the "heavy" analyses on the Yale University Ruddle cluster.
+* The code and additional resources on figshare.com are provided as-is. We have validated that this runs without errors on the Ruddle cluster and on local MacOS systems, but do not guarantee that this will be the case in different computing environments.
 * The "light" analysis portion of this code is written with relative paths that have root project directory structure within this repository (detailed below) but the paths in the scripts run on Ruddle will need to be adjusted to meet you user names and path structures.
 * All analyses run in R were run with `R3.5` (unless stated otherwise in the script header). We do not guarantee the scripts will run with more recent versions of R
 
 # Content
 
-The reposity is split into 2 main parts, each of which serve as project root for the scripts contained in them.
+The repository is split into 2 main parts, each of which serve as project root for the scripts contained in them.
 * human_datasets_analyses: contains all human transcriptmic data analysed, generated in this manuscript or reanalyses of publicly available datasets.
 * msHDAC7KI_analyses: contains all analyses related to the in vivo EAE model using HDAC7 R150KI mice.
 

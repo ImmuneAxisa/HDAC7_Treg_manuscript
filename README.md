@@ -20,7 +20,7 @@ This directory is the project root for all scripts in the subdirectories.
 
 ### src
 
-* `bulk.rna.align.sh`: alignment and quantitations from the original Fastq files. This script is designed to be run on the Ruddle cluster with the `SLURM` scheduler distributing one job per sample. To do so, the scripts iterates through a sample table specifying the name of the fastq files associated with each sample.
+* `bulk.rna.align.sh`: alignment and quantitations from the original Fastq files. This script is designed to be run on the Ruddle cluster with the `SLURM` scheduler distributing one job per sample. To do so, the scripts iterates through a sample table specifying the name of the fastq files associated with each sample. The sample table is expected to contain at least the following columns: Sample_Number, Sample_Name, RNA_FastQ1, RNA_FastQ2.
 * `bulk_wrappers.R` and `gseaplot2_PPAmod.R` contain custom functions for differential gene expression analyses in R. They are sourced by the script in the analysis folder.
 
 
@@ -43,7 +43,7 @@ Single cell RNAseq of brain infiltrating T cells at the peak of EAE in HDAC7 R15
 
 ### src
 
-Contains the script to run cellranger on the Fastq files and generated a count matrix for all droplets.
+Contains the script to run cellranger on the Fastq files and generated a count matrix for all droplets. This is a simple adaptation of the manual instructions available on the 10x genomics website, to be run on the Ruddle cluster.
 
 ### analysis: 
 

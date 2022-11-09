@@ -202,6 +202,45 @@ foxo3dnGeneSet <- merged.foxo %>%
   dplyr::pull(Gene.name) %>%
   toupper()
 
+#####################################################################################################################
+######################################### Prepare FOXO CA genesets ##################################################
+#####################################################################################################################
+
+
+
+#Use activated Treg RNAseq dataset from 2016 Nature paper on FOXO1
+aTregDESeq <- read.delim("huHDAC7_KD/data/aTregNaturePaper.txt", stringsAsFactors = F) %>%
+  separate(ensemblID, into = c("EnsemblID"), by = ".")
+
+#Constitutively active foxo genesets
+CA_rescue_Up <- aTregDESeq %>%
+  dplyr::filter(regulation.CA_rescue. == "Upregulated") %>%
+  dplyr::pull(EnsemblID) %>%
+  convertMouseGeneList() %>%
+  dplyr::filter(Gene.type == "protein_coding") %>%
+  dplyr::pull(Gene.name) %>%
+  toupper()
+
+CA_rescue_Dn <- aTregDESeq %>%
+  dplyr::filter(regulation.CA_rescue. == "Downregulated") %>%
+  dplyr::pull(EnsemblID) %>%
+  convertMouseGeneList() %>%
+  dplyr::filter(Gene.type == "protein_coding") %>%
+  dplyr::pull(Gene.name) %>%
+  toupper()
+
+
+
+
+#####################################################################################################################
+########################################### GSEA on FOXO sets #######################################################
+#####################################################################################################################
+
+
+############################
+## Assemble FOXO genesets ##
+############################
+
 
 foxoGeneSets <- list(foxo1upGeneSet, 
                      foxo1dnGeneSet, 
@@ -216,13 +255,6 @@ names(foxoGeneSets) <- c("Foxo1 KO UP",
                          "Foxo3 KO DN",
                          "Foxo1 CA UP",
                          "Foxo1 CA DN")
-
-
-
-#####################################################################################################################
-########################################### GSEA on FOXO sets #######################################################
-#####################################################################################################################
-
 
 
 #########################

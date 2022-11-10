@@ -208,7 +208,9 @@ foxo3dnGeneSet <- merged.foxo %>%
 
 
 
-#Use activated Treg RNAseq dataset from 2016 Nature paper on FOXO1
+# Use activated Treg RNAseq dataset from 2016 Nature paper on FOXO1
+# Can be downloaded at https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4978705/bin/NIHMS805312-supplement-Data_Table.xlsx
+# and reformatted to a tab delimited file, removing the top part to get the column headers in the first row
 aTregDESeq <- read.delim("huHDAC7_KD/data/aTregNaturePaper.txt", stringsAsFactors = F) %>%
   separate(ensemblID, into = c("EnsemblID"), by = ".")
 

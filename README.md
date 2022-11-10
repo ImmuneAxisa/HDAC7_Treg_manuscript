@@ -78,7 +78,6 @@ It is split into 2 portions:
 │   │   │   └── GSEA.R                        # GSEA on DESeq2 outputs, using the FOXO KO genesets
 │   │   ├── data
 │   │   │   ├── GEO_table_STM_huKD.csv        # sample table
-│   │   │   ├── aTregNaturePaper.txt          # supplementary table from FOXO CA paper
 │   │   │   ├── foxo1.3.TregKO.txt            # GEO2R results table for FOXO1/3 DKO mouse Treg
 │   │   │   ├── foxo1.TregKO.txt              # GEO2R results table for FOXO1 KO Treg
 │   │   │   └── lost-retrieved-from-affy.tsv  # probe id to gene correspondance

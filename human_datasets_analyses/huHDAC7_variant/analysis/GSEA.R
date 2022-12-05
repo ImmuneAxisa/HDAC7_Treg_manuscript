@@ -98,7 +98,7 @@ plotGseaTable(pathways.hallmark[topPathways], RNKvariantVector, fgseaVarH,
 ########################
 
 # Same analysis with the DOSE wrapper that provides a nice interface for making enrichment plots
-# the gseaplot2 has been removed from recent versions so I saved the source code to use it.
+# the gseaplot2 from enrichplot package not available on R3.5 so I sourced the function.
 
 detach("package:dplyr", unload = TRUE)
 library(clusterProfiler)

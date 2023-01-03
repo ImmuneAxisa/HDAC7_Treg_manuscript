@@ -609,6 +609,7 @@ return(list(diffplot1, diffplot3, plot_grid(diffplot1, diffplot3, ncol =2)))
 #function to turn named list into a data frame where 
 #one column contains the name of the vector
 #and the other is the vector values, one by row
+#from https://gist.github.com/aammd/9ae2f5cce9afd799bafb
 list_to_df <- function(listfordf){
   if(!is.list(listfordf)) stop("it should be a list")
   
